@@ -1,0 +1,59 @@
+<h1 mat-dialog-title>You are Editing {{data.name}} Details</h1>
+
+<div mat-dialog-content>
+
+    <!-- <p>What's your favorite city?</p>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="data.city">
+    </mat-form-field> -->
+
+    <!-- <p>Your favorite food?</p>
+    <mat-form-field>
+        <mat-label>Favorite Food</mat-label>
+        <input matInput [(ngModel)]="food">
+    </mat-form-field> -->
+    
+    <div>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="data.name">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput [(ngModel)]="data.lastname">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="data.email">
+        </mat-form-field>
+    </div>
+
+
+    <div>
+        <mat-form-field>
+            <mat-label>Contact</mat-label>
+            <input matInput [(ngModel)]="data.contact">
+        </mat-form-field>
+    </div>
+    
+
+    <div>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput [(ngModel)]="data.password">
+        </mat-form-field>
+    </div>
+
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="updateUser(data)">Update</button>
+    <button mat-button [mat-dialog-close]="data.city" cdkFocusInitial>Close</button>
+</div>

@@ -1,0 +1,118 @@
+
+    <p>all-users works!</p>
+
+<div class="container">
+    <table class="table mt-7">
+        <thead style="background-color: honeydew;">
+            <tr>
+                <th>ID</th>
+                <th>NAME </th>
+                <th>LASTNAME </th>
+                <th>EMAIL </th>
+                <th>ADMIN </th>
+                <th>CONTACT </th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let users of allUsers; let i = index;">
+               
+                <td>{{users._id}}</td>
+                <td>{{users.name}}</td>
+                <td>{{users.lastname}}</td>
+                <td>{{users.email}}</td>
+                <td>{{users.isAdmin}}</td>
+                <td>{{users.contact}}</td>
+                <td>
+                    <!-- <button type="button" class="btn btn-info" data-bs-toggle="modal" (click)="onEdit(users)" data-bs-target="#exampleModalLong">Edit</button> -->
+                    <button type="button" class="btn btn-danger mx-3">Delete</button> 
+                    <button mat-raised-button color="primary" (click)="openDialog(users)">Edit</button>                   
+        
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+
+<!-- MODAL -->
+
+<!-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-header" style="background-color: rgb(219, 252, 170);">
+                <h5 class="modal-title" id="exampleModalLongTitle">Student Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <form [formGroup]="modalform" >
+                    
+                    <div class="form-group mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" formControlName="name" id="name"
+                            placeholder="Enter User Name">
+                            <h6 style="color: red;" *ngIf="modalform.controls['name'].hasError('required')">can't left blank</h6>
+                            <h6 style="color:red" *ngIf="modalform.controls['name'].hasError('minlength')">minimum length should be Three</h6>
+                            <h6 style="color: red;" *ngIf="modalform.controls['name'].hasError('maxlength')">Maximum Twelve Length is required</h6>
+                            
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastname" id="lname"
+                            placeholder="Enter Your Last Name">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" formControlName="email" id="email"
+                            aria-describedby="emailHelp" placeholder="Enter email">
+                            <h6 style="color: red;" *ngIf="modalform.controls['email'].hasError('required')">can't left blank</h6>  
+                        
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="contact">Contact</label>
+                        <input type="text" class="form-control" formControlName="contact"
+                            id="contact" placeholder="98988998998">
+                        <h6 style="color: red;" *ngIf="modalform.controls['contact'].hasError('required')">can't left blank</h6>
+                        <h6 style="color:red" *ngIf="modalform.controls['contact'].hasError('minlength')">minimum length should be five</h6>
+                        <h6 style="color: red;" *ngIf="modalform.controls['contact'].hasError('maxlength')">Maximum Thirteen Length is required</h6>
+
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="pswd">Password</label>
+                        <input type="password" class="form-control" formControlName="password"
+                            id="pswd" placeholder="Password">
+                        <h6 style="color: red;" *ngIf="modalform.controls['password'].hasError('required')">can't left blank</h6>
+                        <h6 style="color:red" *ngIf="modalform.controls['password'].hasError('minlength')">minimum length should be five</h6>
+                        <h6 style="color: red;" *ngIf="modalform.controls['password'].hasError('maxlength')">Maximum Ten Length is required</h6>
+
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer" style="background-color: rgb(200, 164, 226);"> -->
+                <!-- <button type="button" class="btn btn-secondary" id="cancel" data-dismiss="modal" >Close </button> -->
+                <!-- <button type="button" class="btn btn-primary" (click)="postUserData()">Add User</button> -->
+                <!-- <button type="button" class="btn btn-primary" (click)="updateUserData()">Update User</button>
+
+            </div>
+
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+

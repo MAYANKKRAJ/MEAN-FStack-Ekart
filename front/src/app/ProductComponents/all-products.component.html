@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table mt-5">
+        <thead style="background-color: rgb(176, 231, 176);">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>DETAILS</th>
+                <th>WARRANTY</th>
+                <th>PRICE</th>
+                <th>IMAGE</th>
+                <th>Action</th>
+            </tr>       
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let product of allProducts">
+                <td>{{product._id}}</td>
+                <td>{{product.p_name}}</td>
+                <td>{{product.p_details}}</td>
+                <td>{{product.p_warranty}}</td>
+                <td>{{product.p_cost}}</td>
+                <td>{{product.p_image}}</td>
+                <td>
+                    <button mat-raised-button color="primary" (click)="openDialog(product)">Edit</button> 
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

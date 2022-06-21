@@ -1,0 +1,60 @@
+<div mat-dialog-content>
+
+    <!-- <p>What's your favorite city?</p>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="data.city">
+    </mat-form-field> -->
+
+    <!-- <p>Your favorite food?</p>
+    <mat-form-field>
+        <mat-label>Favorite Food</mat-label>
+        <input matInput [(ngModel)]="food">
+    </mat-form-field> -->
+    
+    <div>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="data.p_name">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>Details</mat-label>
+            <input matInput [(ngModel)]="data.p_details">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>Warranty</mat-label>
+            <input matInput [(ngModel)]="data.p_warranty">
+        </mat-form-field>
+    </div>
+
+
+    <div>
+        <mat-form-field>
+            <mat-label>Cost</mat-label>
+            <input matInput [(ngModel)]="data.p_cost">
+        </mat-form-field>
+    </div>
+    
+
+    <div>
+        <mat-form-field>
+            <mat-label>Image</mat-label>
+            <input matInput [(ngModel)]="data.p_image">
+        </mat-form-field>
+    </div>
+
+      
+    
+
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="updateProducts(data)">Update</button>
+    <!-- <button mat-button [mat-dialog-close]="data.city" cdkFocusInitial>Close</button> -->
+</div>

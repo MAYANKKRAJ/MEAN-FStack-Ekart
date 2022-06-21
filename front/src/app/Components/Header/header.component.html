@@ -1,0 +1,20 @@
+<header>
+    <div class="navbar navbar-light bg-primary shadow-sm">
+      <div class="navbar-item align-item-center d-flex">
+        <i style="font-size: 40px;" class="fas fa-shipping-fast"> &nbsp;
+        
+        </i>
+      </div>
+      <button  class="btn btn-success"  [routerLink]="['/dashboard']"> Home</button>
+      <button  class="btn btn-success"  [routerLink]="['/register']"> Register</button>
+  
+      <div class="login-btn">
+        <button routerLink="cart" class="btn btn-primary">
+          <i style="font-size: 40px;" class="fas fa-cart-plus"> &nbsp;</i>
+        <div style="font-size: 13px;top: -24px;right: 20px;" class="badge bg-danger">{{totalCartItem}}</div>
+        </button>
+        <button class="btn btn-success" [routerLink]="['/login']"> Login</button>
+      </div>
+    </div>
+    
+  </header><br><br>
